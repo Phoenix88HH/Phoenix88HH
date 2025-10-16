@@ -1,0 +1,14 @@
+{
+  "name": "tars-assistant",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "start:frontend": "cd frontend && npm run dev",
+    "start:backend": "backend/venv/bin/uvicorn backend.main:app --reload --port 8000",
+    "install": "npm install --prefix frontend && python3 -m venv backend/venv && backend/venv/bin/pip install -r backend/requirements.txt"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

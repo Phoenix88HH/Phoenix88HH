@@ -1,0 +1,34 @@
+# Dependencies
+**/node_modules/
+**/venv/
+**/__pycache__/
+
+# Build artifacts
+build/
+dist/
+out/
+
+# IDE and OS files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+
+# Log and cache files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm/
+.vite/
+.yarn/cache
+.eslintcache
+vite.config.ts.timestamp-*
+
+# Local environment variables
+.env
+.env.*
+!.env.example
