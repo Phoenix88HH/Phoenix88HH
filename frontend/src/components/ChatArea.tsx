@@ -1,13 +1,16 @@
 import React from 'react';
 import { useChatStore, Message } from '../store/chatStore';
+import MarkdownRenderer from './MarkdownRenderer';
 
 const ChatMessage = ({ author, children }) => {
   const isTars = author === 'TARS';
   return (
     <div className={`flex my-2 ${isTars ? 'justify-start' : 'justify-end'}`}>
-      <div className={`px-4 py-2 rounded-lg max-w-xl shadow ${isTars ? 'bg-gray-700' : 'bg-cyan-600'}`}>
-        <p className="font-bold text-sm mb-1 text-cyan-300">{author}</p>
-        <div className="text-white whitespace-pre-wrap">{children}</div>
+      <div className={`px-4 py-2 rounded-lg max-w-3xl shadow ${isTars ? 'bg-gray-800' : 'bg-cyan-800/50'}`}>
+        <p className="font-bold text-sm mb-1 text-cyan-400">{author}</p>
+        <div className="text-white">
+          <MarkdownRenderer content={children} />
+        </div>
       </div>
     </div>
   );
