@@ -32,3 +32,6 @@ vite.config.ts.timestamp-*
 .env
 .env.*
 !.env.example
+
+# Local backend config
+/backend/backend_config.json
